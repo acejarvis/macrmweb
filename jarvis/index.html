@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>MAC RoboMaster</title>
-
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
@@ -84,7 +83,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="" class="btn btn-danger btn-round">Donate Us</a>
+                        <a href="#donate" class="btn btn-danger btn-round"><i></i>Donate Us</a>
                     </li>
                 </ul>
             </div>
@@ -494,8 +493,90 @@
                                 // The location of Uluru
                                 var uluru = { lat: 43.259121, lng: -79.920842 };
                                 // The map, centered at Uluru
-                                var map = new google.maps.Map(
-                                    document.getElementById('map-container'), { zoom: 15, center: uluru });
+                                var map = new google.maps.Map(document.getElementById('map-container'), {
+                                    zoom: 15, 
+                                    center: uluru,
+                                    styles: [
+                                        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                                        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                                        {elementType: 'labels.text.fill', stylers: [{color: '#ba4848'}]},
+                                        {
+                                        featureType: 'administrative.locality',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#9b0d0d'}]
+                                        },
+                                        {
+                                        featureType: 'poi',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#ba4848'}]
+                                        },
+                                        {
+                                        featureType: 'poi.park',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#263c3f'}]
+                                        },
+                                        {
+                                        featureType: 'poi.park',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#6b9a76'}]
+                                        },
+                                        {
+                                        featureType: 'road',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#38414e'}]
+                                        },
+                                        {
+                                        featureType: 'road',
+                                        elementType: 'geometry.stroke',
+                                        stylers: [{color: '#212a37'}]
+                                        },
+                                        {
+                                        featureType: 'road',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#9ca5b3'}]
+                                        },
+                                        {
+                                        featureType: 'road.highway',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#720a0a'}]
+                                        },
+                                        {
+                                        featureType: 'road.highway',
+                                        elementType: 'geometry.stroke',
+                                        stylers: [{color: '#1f2835'}]
+                                        },
+                                        {
+                                        featureType: 'road.highway',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#ba4848'}]
+                                        },
+                                        {
+                                        featureType: 'transit',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#2f3948'}]
+                                        },
+                                        {
+                                        featureType: 'transit.station',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#d59563'}]
+                                        },
+                                        {
+                                        featureType: 'water',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#17263c'}]
+                                        },
+                                        {
+                                        featureType: 'water',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#515c6d'}]
+                                        },
+                                        {
+                                        featureType: 'water',
+                                        elementType: 'labels.text.stroke',
+                                        stylers: [{color: '#17263c'}]
+                                        }
+                                        ] 
+                                    });
                                 // The marker, positioned at Uluru
                                 var marker = new google.maps.Marker({ position: uluru, map: map, title: "MAC RoboMaster" });
                             }
@@ -542,19 +623,53 @@
                     </div>
                     <br />
 
-
-                    <div class="row">
-                        <div class="col-md-12 ml-auto mr-auto">
-                            <button class="btn btn-danger btn-lg btn-fill" onclick="location.href='https://goo.gl/forms/BddLTtGix7bhx8P02'"
-                                type="button">Join Us</button>
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
 
 
 
         </div>
+
+        <!-- Donate Us -->
+        <div id="donate" class="section text-center">
+            <div class="container">
+                <h1 class="title">Why Sponsors Us</h1>
+                <div class="row">
+                        <div class="col-md-12 ml-auto mr-auto">
+                            <img src="./assets/img/logo_master.png" alt="" style="width:50%">
+                        </div>
+
+                    <div class="col-md-12 ml-auto mr-auto">
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                <input type="hidden" name="cmd" value="_s-xclick" />
+                                <input type="hidden" name="hosted_button_id" value="TMVJUH3SEQBGL" />
+                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit"  alt="Donate with PayPal button" />
+                                <img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+                                </form>
+                                <br />
+                                <br />
+
+                    </div>
+
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <img src="./assets/img/donate_qr.png" alt="" style="width:30%">
+                        <p>Or scan the above QR Code!</p>
+                        <br />
+                        <br />
+                    </div>
+                    
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <button class="btn btn-danger btn-lg btn-fill" onclick="location.href='https://goo.gl/forms/BddLTtGix7bhx8P02'"
+                            type="button">Join Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
 
         <!-- Footer -->
         <footer class="footer">
